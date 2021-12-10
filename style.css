@@ -36,6 +36,10 @@ body {
     list-style: none;
     border-radius: 30px;
     background-color: wheat;
+    background-image: url("assets/pictures/3D-printMenu.png");
+    background-size: 200px 300px;
+    background-repeat: no-repeat;
+    background-: ;
     height: 30px;
     width: 0px;
     overflow: hidden;
