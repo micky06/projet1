@@ -1,0 +1,107 @@
+/****************************************************************************/
+/**************************** PARTIE COMMUNE AUX PAGES : MENU ***************/
+/****************************************************************************/
+@font-face {
+        font-family: "Lobster";
+        src: url("assets/fonts/Lobster/Lobster-Regular.ttf");
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 98vw;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    
+    background-color: rgba(52, 182, 255, 0.6);
+}
+.containerTitre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    /* margin: auto; */
+}
+.titre {
+margin-top: 4em;
+}
+.navMenu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    z-index: 10;
+    position: absolute;
+    position: fixed;
+    margin: 20px;
+    list-style: none;
+    border-radius: 30px;
+    background-color: rgb(221, 221, 221);
+    background-image: url("assets/pictures/3D-printMenu.png");
+    background-size: 200px 250px;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 0px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.menu:hover {
+    animation: deroule 0.6s linear both;
+    
+}
+.menu:hover .menuItem{
+    
+    color: rgb(221, 221, 221);
+}
+.link {
+    font-family: "Lobster";
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.item {
+    margin: 30px -10px;
+    padding: 0px;
+    text-align: left;
+}
+
+.item a:hover {
+    color: red;
+    font-size: 1.7em;
+    font-weight: bolder;
+}
+
+.menuItem {
+    margin: 2px -30px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+@keyframes deroule {
+    0% {
+        width: 90px;
+        height: 30px;
+    }
+
+    33% {
+        width: 160px;
+        height: 30px;
+    }
+
+    50% {
+        width: 160px;
+        height: 160px;
+    }
+
+    100% {
+        width: 160px;
+        height: 280px;
+    }
+}
+

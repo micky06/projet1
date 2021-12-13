@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+main#container {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+main#container section{
+    width: 30%;
+    height: 100vh;
+}
+main#container section article{
+    background-color: black;
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 10px;
+}
+main#container section article h3{
+    text-align: center;
+    margin: 3px;
+}
+main#container section article figure{
+    margin: 0;
+    width: 100%;
+}
+main#container section article figure img{
+    width: 100%;
+    height: auto;
+}

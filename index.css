@@ -1,0 +1,178 @@
+/****************************************************************************/
+/****************************        PAGE INDEX.HTML          ***************/
+/****************************************************************************/
+
+/****************************            CAROUSEL             ***************/
+body {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes display {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+}
+
+.carousel>img {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    animation: display 56s infinite;
+}
+
+img:nth-child(2) {
+    animation-delay: 8s;
+}
+
+img:nth-child(3) {
+    animation-delay: 16s;
+}
+
+img:nth-child(4) {
+    animation-delay: 24s;
+}
+
+img:nth-child(5) {
+    animation-delay: 32s;
+}
+
+img:nth-child(6) {
+    animation-delay: 40s;
+}
+
+img:nth-child(7) {
+    animation-delay: 48s;
+}
+
+/****************************            TEXTE             ***************/
+
+.main {
+    margin-top: 500px;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 80%;
+
+}
+
+.teteText {
+    border: grey 2px solid;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 10px;
+    line-height: 2em;
+    margin-bottom: 5em;
+}
+
+main h3 u {
+    margin-top: 5em;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+
+.titreType {
+    margin: 4em 0 3em 0;
+    text-decoration: none;
+
+}
+
+.listeTypeImpression {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.listeTypeImpression li {
+    list-style: none;
+    width: 25%;
+    border: black 2px solid;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 1em 0 2em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.boxPicType {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+}
+
+.picType {
+    width: 25%;
+    height: 25%;
+    border: 2px solid black;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+.indexFin a {
+    margin-bottom: 5em;
+}
+
+.footer {
+
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8em;
+    margin: 5em 0em 0 1em;
+    background-color: cornflowerblue;
+    width: 120%;
+    padding: 0;
+    margin-left: -6em;
+}
+.titleFooter {
+    margin: 0;
+    padding-top: 0.3em;
+}
+
+.logoFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoFooter div img {
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+    
+}
