@@ -1,0 +1,55 @@
+body{
+    display: flex;
+}
+
+.listeFDM {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+.boxPicFDM {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxPicFDM img {
+    margin-top: 2em;
+}
+
+/* ******************* FOOTER ********************************* */
+.sectionFooter {
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 0.8em;
+    margin: 5em 0em 0 1em;
+    background-color: cornflowerblue;
+    width: 120%;
+    padding: 0;
+    margin-left: -6em;
+}
+.titleFooter {
+    margin: 0;
+    text-align: center;
+}
+
+.logoFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoFooter div img {
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+    
+}
