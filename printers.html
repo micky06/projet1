@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="printers.css">
-    <title>Projet 1</title>
+    <title>Les Imprimantes 3D</title>
 </head>
 
 <body>
@@ -34,60 +34,69 @@
     </nav>
     <!-- ******************** TEXTE PRINCIPAL ******************** -->
 
-    <main>
+    <main class="main">
         <div class="fdm">
-            <h2>
+            <h1 class="teteText">
                 1. L’impression 3D par dépôt de matière
-            </h2>
+            </h1>
+            <div>
+                <h3>
+                    Le FDM ou FFF
+                </h3>
+            </div>
+            <div class="hautTexte">
+                <a>
+                    La majorité des imprimantes 3D personnelles fonctionnent selon ce principe.<br> FDM est l’acronyme
+                    anglais
+                    de
+                    Fused Deposition Modeling qui signifie « modelage par dépôt de filament en fusion ».<br> Ce procédé
+                    qui
+                    a
+                    été
+                    inventé en 1988 par la société Stratasys, est une marque déposée.<br> On parle aussi de FFF (Fused
+                    Filament
+                    Fabrication) voir même de MPD (Molten Polymer Deposition) qui sont eux des termes libres de
+                    droits.<br>
+                    Cette
+                    technique consiste à déposer couche par couche un filament de matière thermoplastique fondu à 200°C
+                    (en
+                    moyenne) qui en se superposant donne forme à l’objet.
+                </a>
+                <a>
+                    La tête d’impression se déplace selon les coordonnées X, Y et Z (longueur, largeur et hauteur)
+                    transmises
+                    par un fichier 3D correspondant au modèle 3D de l’objet à imprimer.<br> Limitée pendant longtemps à
+                    des
+                    matériaux de type plastique tels que les classiques PLA et l’ABS, l’impression 3D voit arriver de
+                    nouveaux
+                    filaments composites à base de métal (cuivre, bronze…), de fibres de carbone et même de bois.<br>
+                    Plus
+                    rarement
+                    certaines machines utilisent des cires ou des polycarbonates.<br> Aujourd’hui l’industrie
+                    agroalimentaire et
+                    la
+                    médecine s’emparent peu à peu de cette technique pour imprimer des aliments et des cellules en
+                    adaptant
+                    la
+                    tête d’extrusion.<br>
+                </a>
+            </div>
             <h3>
-                Le FDM ou FFF
-            </h3>
-            <a>
-                explication les différente étape du FDM
-            </a>
-            <a>
-                La majorité des imprimantes 3D personnelles fonctionnent selon ce principe.<br> FDM est l’acronyme
-                anglais
-                de
-                Fused Deposition Modeling qui signifie « modelage par dépôt de filament en fusion ».<br> Ce procédé qui
-                a
-                été
-                inventé en 1988 par la société Stratasys, est une marque déposée.<br> On parle aussi de FFF (Fused
-                Filament
-                Fabrication) voir même de MPD (Molten Polymer Deposition) qui sont eux des termes libres de droits.<br>
-                Cette
-                technique consiste à déposer couche par couche un filament de matière thermoplastique fondu à 200°C (en
-                moyenne) qui en se superposant donne forme à l’objet.
-            </a>
-            <a>
-                La tête d’impression se déplace selon les coordonnées X, Y et Z (longueur, largeur et hauteur)
-                transmises
-                par un fichier 3D correspondant au modèle 3D de l’objet à imprimer.<br> Limitée pendant longtemps à des
-                matériaux de type plastique tels que les classiques PLA et l’ABS, l’impression 3D voit arriver de
-                nouveaux
-                filaments composites à base de métal (cuivre, bronze…), de fibres de carbone et même de bois.<br> Plus
-                rarement
-                certaines machines utilisent des cires ou des polycarbonates.<br> Aujourd’hui l’industrie
-                agroalimentaire et
-                la
-                médecine s’emparent peu à peu de cette technique pour imprimer des aliments et des cellules en adaptant
-                la
-                tête d’extrusion.<br>
-            </a>
-            <a>
                 Il existe 3 types d'imprimantes FDM :
-            </a>
+            </h3>
             <div class="listeFDM">
-                <li>les imprimantes CARTEZIENES</li>
+                <li class="listeC">les imprimantes CARTEZIENES</li>
                 <li>Les imprimantes CORE XY</li>
                 <li>Les imprimantes DELTA</li>
             </div>
             <div class="boxPicFDM">
-                <img src="assets/pictures/type/cartesian.jpg" alt="printer FDM" class="picType">
-                <img src="assets/pictures/type/corexy.jpg" alt="printer resine" class="picType">
-                <img src="assets/pictures/type/delta.jpg" alt="printer SLS" class="picType">
+                <img src="assets/pictures/type/cartesian.jpg" alt="printer FDM" class="picType picC">
+                <img src="assets/pictures/type/corexy.jpg" alt="printer resine" class="picType picX">
+                <img src="assets/pictures/type/delta.jpg" alt="printer SLS" class="picType picD">
             </div>
-    
+            <div class="finTexte">
+                <a></a>
+            </div>
         </div>
         <div class="resine">
             <h2>
@@ -216,7 +225,7 @@
                     des
                     alliages comme l’Inconel.
                 </a>
-                <a>
+                <a class="finTexte">
                     Même si sa précision d’impression est inférieure au SLA, le frittage laser permet de fabriquer des
                     pièces
                     avec un niveau de détail assez élevé (0.1mm) et à géométrie complexe.<br> De plus la poudre restante
@@ -230,39 +239,40 @@
                     granuleux.
                 </a>
             </div>
-            <div>
-                <h2>
-                    3 . L’agglomération de poudre par collage
-                </h2>
-                <h3>
-                    LA 3DP (Three-Dimensional Printing)
-                </h3>
-                <a>
-                    Initialement développée en 1993 au Massachusetts à l’Institut of Technology (MIT) en 1993, la 3DP
-                    (Three-Dimensional Printing) constitue la base du processus d’impression 3D de Z Corporation.<br> Le
-                    procédé
-                    consiste en l’étalement d’une fine couche de poudre de composite sur une plateforme.<br> La tête
-                    d’impression va
-                    alors déposer sur celle-ci de fines gouttes de glu colorées qui combinées entre elles permettent
-                    d’obtenir
-                    un large panel de couleur.<br> La plateforme s’abaisse au fur et à mesure que les couches de poudre
-                    sont
-                    collées
-                    jusqu’à obtenir l’objet final.
-                </a>
-                <a>
-                    Pour la finition il faut aspirer l’excédent de poudre, brosser et/ou poncer la pièce, puis la
-                    chauffer pour
-                    finaliser la solidification.<br> La 3DP a l’avantage d’être rapide et de proposer une large gamme de
-                    couleurs.
-                    Jusqu’à 6 fois moins chère qu’une imprimante 3D SLA son prix est plus attractif malgré une précision
-                    et une
-                    qualité d’impression parfois inférieure.<br> Parmi les inconvénients, sans traitement
-                    post-impression les
-                    pièces
-                    sont plus fragiles et leur surface est plus rugueuse.
-                </a>
-            </div>
+        </div>
+        <div class="troisDP">
+            <h2>
+                3 . L’agglomération de poudre par collage
+            </h2>
+            <h3>
+                LA 3DP (Three-Dimensional Printing)
+            </h3>
+            <a>
+                Initialement développée en 1993 au Massachusetts à l’Institut of Technology (MIT) en 1993, la 3DP
+                (Three-Dimensional Printing) constitue la base du processus d’impression 3D de Z Corporation.<br> Le
+                procédé
+                consiste en l’étalement d’une fine couche de poudre de composite sur une plateforme.<br> La tête
+                d’impression va
+                alors déposer sur celle-ci de fines gouttes de glu colorées qui combinées entre elles permettent
+                d’obtenir
+                un large panel de couleur.<br> La plateforme s’abaisse au fur et à mesure que les couches de poudre
+                sont
+                collées
+                jusqu’à obtenir l’objet final.
+            </a>
+            <a>
+                Pour la finition il faut aspirer l’excédent de poudre, brosser et/ou poncer la pièce, puis la
+                chauffer pour
+                finaliser la solidification.<br> La 3DP a l’avantage d’être rapide et de proposer une large gamme de
+                couleurs.
+                Jusqu’à 6 fois moins chère qu’une imprimante 3D SLA son prix est plus attractif malgré une précision
+                et une
+                qualité d’impression parfois inférieure.<br> Parmi les inconvénients, sans traitement
+                post-impression les
+                pièces
+                sont plus fragiles et leur surface est plus rugueuse.
+            </a>
+        </div>
     </main>
     <section class="sectionFooter">
         <footer class="footer">
