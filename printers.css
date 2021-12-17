@@ -4,14 +4,81 @@ body {
     
 }
 
+.menuPrinters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divmenuprinters {
+   
+    width: 50%;
+}
+.iconMenuPrinters {
+    height: 7em; 
+    margin: 0 4em;
+}
+
+/* .cercle{
+    height: 0;
+    width: 0;
+    margin-left: -25%;
+    margin-top: -10%;
+    overflow: hidden;
+    border-radius: 50%;
+    background-image: url('assets/pictures/3D-printMenu.png');
+    background-repeat: no-repeat;
+    background-color: rgba(52, 182, 255);
+    z-index: -10;
+    transition: height 0.5s, width 0.5s;
+}
+
+.zoom {
+    position: absolute;
+    margin-left: -25%;
+    margin-top: -10%;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+} */
 .main {
-    margin-top: 100px;
+    margin-top: 2em;
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
 
 }
+.fdm {
+    display: none;
+}
+.resine {
+    display: none;
+}
 
+.troisDP{
+    display: none;
+}
+
+
+.apparait {
+    display: block;
+}
+.fdmEnfant {
+    opacity: 0;
+    transition: opacity 5s linear 1s;
+}
+.resineEnfant {
+    opacity: 0;
+    transition: opacity 5s linear 1s;
+}
+
+.troisDPEnfant {
+    opacity: 0;
+    transition: opacity 5s linear 1s;
+}
+.apparaitEnfant {
+    opacity: 1;
+}
 .teteText {
     border: grey 2px solid;
     border-radius: 20px;
@@ -19,7 +86,7 @@ body {
     text-align: center;
     padding: 10px;
     line-height: 2em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 }
 
 .hautTexte , h3 {
@@ -28,7 +95,7 @@ body {
     background-color: rgb(221, 221, 221);
     text-align: center;
     padding: 10px;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     line-height: 2em;
 }
 
@@ -75,13 +142,6 @@ body {
 .finTexte {
     height: 5em;
     padding-bottom: 5em;
-}
-.resine {
-    display: none;
-}
-
-.troisDP{
-    display: none;
 }
 
 /* ******************* FOOTER ********************************* */
