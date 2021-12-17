@@ -1,8 +1,12 @@
 body {
     width: 100vw;
     height: 85vh;
-    
+
 }
+
+/* ***************************************************************** */
+/* ************************ MENU SECONDAIRE ************************ */
+/* ***************************************************************** */
 
 .menuPrinters {
     display: flex;
@@ -10,52 +14,28 @@ body {
 }
 
 .divmenuprinters {
-   
+
     width: 50%;
 }
+
 .iconMenuPrinters {
-    height: 7em; 
+    height: 7em;
     margin: 0 4em;
 }
 
-/* .cercle{
-    height: 0;
-    width: 0;
-    margin-left: -25%;
-    margin-top: -10%;
-    overflow: hidden;
-    border-radius: 50%;
-    background-image: url('assets/pictures/3D-printMenu.png');
-    background-repeat: no-repeat;
-    background-color: rgba(52, 182, 255);
-    z-index: -10;
-    transition: height 0.5s, width 0.5s;
-}
+/* ***************************************************************** */
+/* ****************** TRANSITIONS ENTRE LES PAGES ****************** */
+/* ***************************************************************** */
 
-.zoom {
-    position: absolute;
-    margin-left: -25%;
-    margin-top: -10%;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    z-index: 9;
-} */
-.main {
-    margin-top: 2em;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
-
-}
 .fdm {
     display: none;
 }
+
 .resine {
     display: none;
 }
 
-.troisDP{
+.troisDP {
     display: none;
 }
 
@@ -63,22 +43,39 @@ body {
 .apparait {
     display: block;
 }
+
 .fdmEnfant {
     opacity: 0;
-    transition: opacity 5s linear 1s;
+    transition: opacity 5s;
 }
+
 .resineEnfant {
     opacity: 0;
-    transition: opacity 5s linear 1s;
+    transition: opacity 5s;
 }
 
 .troisDPEnfant {
     opacity: 0;
-    transition: opacity 5s linear 1s;
+    transition: opacity 5s;
 }
+
 .apparaitEnfant {
     opacity: 1;
+    transition: opacity 5s;
 }
+
+/* ***************************************************************** */
+/* ******************** MISE EN FORME DES PAGES ******************** */
+/* ***************************************************************** */
+
+.main {
+    margin-top: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+
+}
+
 .teteText {
     border: grey 2px solid;
     border-radius: 20px;
@@ -89,7 +86,8 @@ body {
     margin-bottom: 3em;
 }
 
-.hautTexte , h3 {
+.hautTexte,
+h3 {
     border: grey 2px solid;
     border-radius: 20px;
     background-color: rgb(221, 221, 221);
@@ -124,7 +122,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    transition: 0.9s ;
+    transition: 0.9s;
 }
 
 .boxPicFDM img:hover {
@@ -143,8 +141,10 @@ body {
     height: 5em;
     padding-bottom: 5em;
 }
-
+/* ************************************************************ */
 /* ******************* FOOTER ********************************* */
+/* ************************************************************ */
+
 .sectionFooter {
     display: flex;
     align-items: flex-end;

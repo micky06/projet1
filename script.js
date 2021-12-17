@@ -11,29 +11,26 @@ for (let i = 0; i < menuPrinters.length; i++) {
     pageFDMEnfant.classList.add("apparaitEnfant");
     menuPrinters[i].addEventListener('click', function () {
         if (menuPrinters[i].alt === "FDM") {
-            // transition.classList.toggle("zoom")
             pageFDM.classList.add("apparait");
-            pageFDMEnfant.classList.add("apparaitEnfant");
+            setTimeout(() => pageFDMEnfant.classList.add("apparaitEnfant"), 1)
             pageResine.classList.remove("apparait");
             pageResineEnfant.classList.remove("apparaitEnfant");
             pageTDP.classList.remove("apparait");
             pageTDPEnfant.classList.remove("apparaitEnfantEnfant");
         } else if (menuPrinters[i].alt === "SLA") {
-            // transition.classList.toggle("zoom")
             pageFDM.classList.remove("apparait");
             pageFDMEnfant.classList.remove("apparaitEnfant");
             pageResine.classList.add("apparait");
-            pageResineEnfant.classList.add("apparaitEnfant");
+            setTimeout(() => pageResineEnfant.classList.add("apparaitEnfant"), 1);
             pageTDP.classList.remove("apparait");
             pageTDPEnfant.classList.remove("apparaitEnfant");
         } else if (menuPrinters[i].alt === "3DP") {
-            // transition.classList.toggle("zoom")
             pageFDM.classList.remove("apparait");
             pageFDMEnfant.classList.remove("apparaitEnfant");
             pageResine.classList.remove("apparait");
             pageResineEnfant.classList.remove("apparaitEnfant");
             pageTDP.classList.add("apparait");
-            pageTDPEnfant.classList.add("apparaitEnfant");
+            setTimeout(() => pageTDPEnfant.classList.add("apparaitEnfant"), 1);
         }
     })
 
