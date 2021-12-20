@@ -1,6 +1,106 @@
 
+* {
+    box-sizing: border-box;
+}
 
+body {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* align-items: center; */
+}
 
+.cadrePhoto {
+    border: 1px solid black;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 80px auto;
+    /* perspective: 1000px; */
+    overflow: hidden;
+    background-color: black;
+}
+
+@media all and (max-width: 610px) {
+    .cadrePhoto{
+        width: 400px;
+        height: 267px;
+    }
+    .photo {
+        width: 400px;
+        height: 267px;
+    }
+    }
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+ label {
+     font-size: 2em;
+     border:  1px solid blue;
+     padding: 1em;
+     border-radius: 50%;
+     transition: 0.4s;
+   }
+
+   label:hover {
+       background-color: blue;
+       color: whitesmoke;
+   }
+  
+
+   .labelboutton {
+       background-color: blue;
+       color: whitesmoke;
+   }
+  
+ input {
+     display: none;
+   }
+ 
+.carousel {    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3em;
+    width: 100%;
+    height: 10%;
+}
+
+.carousel__cell {
+    width: 95px;
+    height: 100px;
+    left: 10px;
+    border: 2px solid black;
+    /* line-height: 116px; */
+    border-radius: 10%;
+    transition-duration: 0.4s;
+}
+
+.carousel__cell:hover {
+    width: 130px;
+    height: 150px;
+    margin-top: -8em;
+    border-radius: 10%;
+}
+
+.carousel1 {
+    display: none;
+}
+.carousel2 {
+    display: none;
+}
+.carousel3 {
+    display: none;
+}
+.apparait {
+    display: block;
+}
 
 /* *********************** FOOTER ***********************************/
 .sectionFooter {
