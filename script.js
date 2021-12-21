@@ -137,9 +137,9 @@ for (let i = 0; i < cells.length; i++) {
       cells[y].style.height = 100 + "px";
     }
   })
-  for (let y = 0; y < cells.length; y++) {
-    cells[y].style.width = 95 + "px";
-    cells[y].style.height = 100 + "px";
-  }
+  // for (let y = 0; y < cells.length; y++) {
+  //   cells[y].style.width = 95 + "px";
+  //   cells[y].style.height = 100 + "px";
+  // }
 
 }
