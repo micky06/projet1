@@ -86,18 +86,27 @@ for (let x = 0; x < buttonRadio.length; x++) {
     /********* afficher les images correspondant au menu ********/
     switch (valeur) {
       case 'Imprimantes':
+        document.body.classList.add('imageBody1');
+        document.body.classList.remove('imageBody2');
+        document.body.classList.remove('imageBody3');
         carousel1.classList.add("apparait");
         carousel2.classList.remove("apparait");
         carousel3.classList.remove("apparait");
         cadre.src = pic1.src;
         break;
       case 'Consommables':
+        document.body.classList.remove('imageBody1');
+        document.body.classList.add('imageBody2');
+        document.body.classList.remove('imageBody3');
         carousel1.classList.remove("apparait");
         carousel2.classList.add("apparait");
         carousel3.classList.remove("apparait");
         cadre.src = pic2.src;
         break;
       case 'Réalisations':
+        document.body.classList.remove('imageBody1');
+        document.body.classList.remove('imageBody2');
+        document.body.classList.add('imageBody3');
         carousel1.classList.remove("apparait");
         carousel2.classList.remove("apparait");
         carousel3.classList.add("apparait");

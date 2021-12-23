@@ -9,7 +9,33 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    /* align-items: center; */
+    background: url("assets/pictures/background/imprimante.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imageBody1 {
+    background: url("assets/pictures/background/imprimante.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.imageBody2 {
+    background: url("assets/pictures/background/filament.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.imageBody3 {
+    background: url("assets/pictures/background/realisation.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hautDePage {
@@ -18,11 +44,11 @@ body {
 }
 
 .cadrePhoto {
-    border: 1px solid black;
+    border: 8px groove black;
     position: relative;
     width: 800px;
     height: 600px;
-    margin: 4em 0 0 11em;
+    margin: 4em 0 0 11%;
     /* perspective: 1000px; */
     overflow: hidden;
     background-color: black;
@@ -32,23 +58,11 @@ body {
     align-self: auto;
     height:600px ;
 }
-
-@media all and (max-width: 610px) {
-    .cadrePhoto{
-        width: 400px;
-        height: 267px;
-    }
-    .photo {
-        width: 400px;
-        height: 267px;
-    }
-    }
-
 .buttons {
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
-    margin: 14em 0 0 10em;
+    margin: 14em 0 0 5%;
 }
 
  label {
@@ -56,7 +70,7 @@ body {
      border:  1px solid blue;
      padding: 1em;
      margin-bottom: 2em;
-     border-radius: 50%;
+     border-radius: 90%;
      transition: 0.4s;
    }
 
@@ -75,6 +89,9 @@ body {
      display: none;
    }
  
+.icon {
+    display: none;
+}
 .carousel {    
     display: flex;
     justify-content: center;
@@ -115,6 +132,83 @@ body {
     display: block;
 }
 
+
+@media all and (max-width: 1250px) {
+    .hautDePage {
+        flex-direction: column;
+        margin: 0;
+    }
+    .cadrePhoto{
+        margin: 2em auto 0;
+    }
+    .buttons{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2em 0 0 0;
+    }
+    }
+
+@media all and (max-width: 900px) {
+    .hautDePage {
+        flex-direction: column;
+        margin: 0;
+    }
+    .cadrePhoto{
+        width: 400px;
+        height: 267px;
+        margin: 2em auto 0;
+    }
+    .photo {
+        width: 400px;
+        height: 267px;
+    }
+    .buttons{
+        flex-direction: row;
+        margin: 2em 0 0 0;
+    }
+    }
+
+@media all and (max-width: 645px) {
+    .hautDePage {
+        flex-direction: column;
+        margin: 0;
+    }
+    .cadrePhoto{
+        width: 500px;
+        height: 400px;
+        margin: 2em auto 0;
+    }
+    .photo {
+        width: 500px;
+        height: 400px;
+    }
+    .buttons{
+        flex-direction: row;
+        margin: 2em 0 0 0;
+    }
+    label {
+        width: 78px;
+        height: 78px;
+        /* overflow: hidden; */
+        
+    }
+    .icon {
+        display: block;
+        height: 58px;
+        width: 58px;
+        padding: 0;
+        margin: -15px;
+    }
+    .carousel__cell{
+        opacity: 0.7;
+        margin-bottom: 2em;
+    }
+    .spanIcon {
+        visibility: hidden;
+    }
+    }
+
+
 /* *********************** FOOTER ***********************************/
 .sectionFooter {
     display: flex;
@@ -127,9 +221,9 @@ body {
 
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     font-size: 0.8em;
-    /* margin: 5em 0em 0 1em; */
+    height: 4em;
     background-color: cornflowerblue;
     width: 120%;
     padding: 0;
