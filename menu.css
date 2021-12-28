@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    /* width: 98vw; */
+    width: 100vw;
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     
     background-color: rgba(52, 182, 255, 0.6);
@@ -105,3 +105,42 @@ margin-top: 4em;
     }
 }
 
+
+
+/* *********************** FOOTER ***********************************/
+.sectionFooter {
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8em;
+    height: 4em;
+    background-color: cornflowerblue;
+    width: 120%;
+    padding: 0;
+    /* margin-left: -6em; */
+}
+.titleFooter {
+    margin: 0;
+    text-align: center;
+}
+
+.logoFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoFooter div img {
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+    /* margin-top: 2em; */
+}

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'NanumPen';
+    src: url('assets/fonts/Changa_One/ChangaOne-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Monoton';
+    src: url('assets/fonts/Monoton/Monoton-Regular.ttf');
+}
+
+body {
+    width: 100vw;
+    height: 85vh;
+
+}
+
+/* ***************************************************************** */
+/* ******************** MISE EN FORME DE LA PAGE ******************* */
+/* ***************************************************************** */
+
+.main {
+    margin-top: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.lienSlicer {
+    text-decoration: none;
+}
+
+h3:hover {
+    background-color: rgba(52, 182, 255, 0.6);
+}
+
+.teteText {
+    border: grey 2px solid;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 10px;
+    line-height: 2em;
+    margin-bottom: 3em;
+
+}
+
+.hautTexte,
+h3 {
+    color: black;
+    border: grey 2px solid;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3em;
+    line-height: 2em;
+    font-family: 'Monoton';
+    font-size: 2em;
+}
+
+.picSlicer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NanumPen';
+    font-size: 1.5em;
+}
+
+img {
+    margin-bottom: 2em;
+    border-radius: 20px;
+    box-shadow: 15px 15px 50px black;
+    max-width: 40em;
+}
+
+span {
+    font: italic 1.3em gray;
+    font-family: cursive;
+}
+
+.texte {
+    vertical-align: middle;
+
+}
+
+p {
+    width: 70%;
+    border: grey 2px solid;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: left;
+    padding: 20px 30px;
+    margin-bottom: 3em;
+    box-shadow: 15px 15px 50px black;
+    line-height: 1.2em;
+
+}
+
+.hautText {
+    width: 100%;
+    border: grey 2px solid;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3em;
+    box-shadow: 15px 15px 50px black;
+    line-height: 2em;
+}
+
+.finTexte {
+    height: 5em;
+    padding-bottom: 5em;
+}
+
+@media all and (max-width: 1100px) {
+    .picSlicer {
+        flex-direction: column;
+    }
+    img {
+        margin-bottom: 2em;
+        border-radius: 20px;
+        box-shadow: 15px 15px 50px black;
+        max-width: 30em;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .picSlicer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        margin-top: 2em;
+        border-radius: 20px;
+        box-shadow: 15px 15px 50px black;
+        max-width: 20em;
+    }
+    p {
+        margin: auto;
+    }
+}
+@media all and (max-width: 500px) {
+    img {
+        max-width: 10em;
+    }
+    img:hover{
+        max-width: 18em;
+    }
+}
