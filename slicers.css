@@ -10,7 +10,7 @@
 
 body {
     width: 100vw;
-    height: 85vh;
+    /* height: 85vh; */
 
 }
 
@@ -66,7 +66,7 @@ h3 {
     font-size: 1.5em;
 }
 
-img {
+.pickSlicer img {
     margin-bottom: 2em;
     border-radius: 20px;
     box-shadow: 15px 15px 50px black;
@@ -117,7 +117,7 @@ p {
     .picSlicer {
         flex-direction: column;
     }
-    img {
+    .pickSlicer img {
         margin-bottom: 2em;
         border-radius: 20px;
         box-shadow: 15px 15px 50px black;
@@ -131,7 +131,7 @@ p {
         justify-content: center;
         align-items: center;
     }
-    img {
+    .pickSlicer img {
         margin-top: 2em;
         border-radius: 20px;
         box-shadow: 15px 15px 50px black;
@@ -142,10 +142,10 @@ p {
     }
 }
 @media all and (max-width: 500px) {
-    img {
+    .pickSlicer img {
         max-width: 10em;
     }
-    img:hover{
+    .pickSlicer img:hover{
         max-width: 18em;
     }
 }
