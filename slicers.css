@@ -1,27 +1,20 @@
-@font-face {
-    font-family: 'NanumPen';
-    src: url('assets/fonts/Changa_One/ChangaOne-Italic.ttf');
-}
-
-@font-face {
-    font-family: 'Monoton';
-    src: url('assets/fonts/Monoton/Monoton-Regular.ttf');
-}
-
-body {
-    width: 100vw;
-    /* height: 85vh; */
-
-}
 
 /* ***************************************************************** */
 /* ******************** MISE EN FORME DE LA PAGE ******************* */
 /* ***************************************************************** */
 
+body {
+    text-align: center;
+}
+
+h3, .teteText, .picSlicer p, .hautText {
+    border: var(--border);
+    background-color: var(--color-bgd-txt);
+    border-radius: 20px;
+}
+
 .main {
-    margin-top: 2em;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 2em auto 0;
     width: 80%;
 }
 
@@ -29,48 +22,39 @@ body {
     text-decoration: none;
 }
 
+h3 {
+    color: black;
+    padding: 10px;
+    margin-bottom: 3em;
+    line-height: 2em;
+    font-family: 'Monoton', sans-serif;
+    font-size: 2em;
+    box-shadow: inset 3px 3px 20px black;
+}
 h3:hover {
     background-color: rgba(52, 182, 255, 0.6);
 }
 
 .teteText {
-    border: grey 2px solid;
     border-radius: 20px;
-    background-color: rgb(221, 221, 221);
-    text-align: center;
     padding: 10px;
     line-height: 2em;
     margin-bottom: 3em;
-
 }
 
-.hautTexte,
-h3 {
-    color: black;
-    border: grey 2px solid;
-    border-radius: 20px;
-    background-color: rgb(221, 221, 221);
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 3em;
-    line-height: 2em;
-    font-family: 'Monoton';
-    font-size: 2em;
-}
 
 .picSlicer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'NanumPen';
+    font-family: 'NanumPen',sans-serif;
     font-size: 1.5em;
+    flex-wrap: wrap;
 }
 
-.pickSlicer img {
-    margin-bottom: 2em;
-    border-radius: 20px;
-    box-shadow: 15px 15px 50px black;
-    max-width: 40em;
+.texte {
+   width: 50%;
+   min-width: 500px; 
 }
 
 span {
@@ -78,74 +62,30 @@ span {
     font-family: cursive;
 }
 
-.texte {
-    vertical-align: middle;
-
+.picSlicer img {
+    width: 50%;
+    min-width: 500px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
 }
 
-p {
-    width: 70%;
-    border: grey 2px solid;
-    border-radius: 20px;
-    background-color: rgb(221, 221, 221);
+.picSlicer p {
     text-align: left;
     padding: 20px 30px;
-    margin-bottom: 3em;
-    box-shadow: 15px 15px 50px black;
+    margin: 1em;
+    box-shadow: var(--box-shadow);
     line-height: 1.2em;
-
 }
 
 .hautText {
-    width: 100%;
-    border: grey 2px solid;
-    border-radius: 20px;
-    background-color: rgb(221, 221, 221);
-    text-align: center;
+    width: calc(100% - 4px - 20px);
     padding: 10px;
-    margin-bottom: 3em;
-    box-shadow: 15px 15px 50px black;
+    margin: 0;
+    box-shadow: var(--box-shadow);
     line-height: 2em;
 }
 
 .finTexte {
     height: 5em;
     padding-bottom: 5em;
-}
-
-@media all and (max-width: 1100px) {
-    .picSlicer {
-        flex-direction: column;
-    }
-    .pickSlicer img {
-        margin-bottom: 2em;
-        border-radius: 20px;
-        box-shadow: 15px 15px 50px black;
-        max-width: 30em;
-    }
-}
-
-@media all and (max-width: 750px) {
-    .picSlicer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .pickSlicer img {
-        margin-top: 2em;
-        border-radius: 20px;
-        box-shadow: 15px 15px 50px black;
-        max-width: 20em;
-    }
-    p {
-        margin: auto;
-    }
-}
-@media all and (max-width: 500px) {
-    .pickSlicer img {
-        max-width: 10em;
-    }
-    .pickSlicer img:hover{
-        max-width: 18em;
-    }
 }

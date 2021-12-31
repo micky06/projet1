@@ -1,6 +1,24 @@
 /****************************************************************************/
 /**************************** PARTIE COMMUNE AUX PAGES : MENU ***************/
 /****************************************************************************/
+
+:root {
+    --border: grey 2px solid;
+    --box-shadow: 15px 15px 50px black;
+    --color-bgd-txt: rgb(221, 221, 221);
+    --color-bgd: rgba(52, 182, 255, 0.6);
+}
+
+@font-face {
+    font-family: 'NanumPen';
+    src: url('assets/fonts/Changa_One/ChangaOne-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Monoton';
+    src: url('assets/fonts/Monoton/Monoton-Regular.ttf');
+}
+
 @font-face {
     font-family: "Lobster";
     src: url("assets/fonts/Lobster/Lobster-Regular.ttf");
@@ -12,8 +30,8 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-
-    background-color: rgba(52, 182, 255, 0.6);
+    background-color: var(--color-bgd);
+    box-sizing: border-box;
 }
 
 .containerTitre {
@@ -43,7 +61,7 @@ body {
     margin: 20px;
     list-style: none;
     border-radius: 30px;
-    background-color: rgb(221, 221, 221);
+    background-color: var(--color-bgd-txt);
     background-image: url("assets/pictures/3D-printMenu.png");
     background-size: 200px 250px;
     background-repeat: no-repeat;
@@ -60,7 +78,7 @@ body {
 
 .menu:hover .menuItem {
 
-    color: rgb(221, 221, 221);
+    color: var(--color-bgd-txt);
 }
 
 .link {
@@ -121,7 +139,6 @@ body {
 }
 
 .footer {
-    
     position: fixed;
     bottom: 0;
     left: 0;
