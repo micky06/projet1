@@ -77,35 +77,59 @@ img:nth-child(7) {
 }
 
 /****************************            TEXTE             ***************/
-
 .main {
-    margin-top: 500px;
-    margin-left: 5%;
-    margin-right: 10%;
+    margin: 500px auto;
     width: 80%;
-
 }
 
-.teteText {
-    border: grey 2px solid;
-    border-radius: 20px;
-    background-color: rgb(221, 221, 221);
+.teteText, .titreType, .texte, .indexFin, .texteLi, h3 {
+    border: var(--border);
     text-align: center;
     padding: 10px;
     line-height: 2em;
-    margin-bottom: 5em;
+    border-radius: 20px;
+    background-color: var(--color-bgd-txt);
+    box-shadow: var(--box-shadow);
 }
 
-main h3 u {
-    margin-top: 5em;
-    text-decoration: none;
-    border-bottom: 2px solid black;
+.teteText {
+    font-family: 'ManumPen', sans-serif;
+    margin-bottom: 5em;
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.indexFin, .texte, .texteLi {
+    margin-bottom: 3em;
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+h3{
+    margin-top: 4em;
+    line-height: 2em;
+    font-family: 'Monoton', sans-serif;
+    font-size: 2em;
+    box-shadow: inset 3px 3px 20px black;
+}
+.texte{
+    font-family: 'ManumPen', sans-serif;
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+
+.texteLi li{
+    font-family: 'ManumPen', sans-serif;
+    text-align: left;
+    line-height: 1.2em;
 }
 
 .titreType {
+    line-height: 1.2em;
+    font-size: 1.2em;
     margin: 4em 0 3em 0;
     text-decoration: none;
-
+    font-family: 'ManumPen', sans-serif;
 }
 
 .listeTypeImpression {
@@ -120,7 +144,7 @@ main h3 u {
     border: black 2px solid;
     border-bottom: none;
     border-radius: 20px 20px 0 0;
-    background-color: rgb(221, 221, 221);
+    background-color: var(--color-bgd-txt);
     text-align: center;
     padding: 1em 0 2em 0;
     font-size: 1.2em;
@@ -138,6 +162,7 @@ main h3 u {
 
 .boxPicType li {
     font-size: 1em;
+    box-shadow: var(--box-shadow);
 }
 .picType {
     width: 60%;
@@ -145,11 +170,14 @@ main h3 u {
     border: 2px solid black;
     border-top: none;
     border-radius: 0 0 20px 20px;
+    box-shadow: var(--box-shadow);
 }
 
 .indexFin a {
     padding-bottom: 5em;
+    font-family: 'ManumPen', sans-serif;
 }
+
 @media all and (max-width: 900px){
     .listeTypeImpression {
         display: block;

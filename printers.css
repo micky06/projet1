@@ -76,25 +76,34 @@ body {
 
 }
 
-.teteText {
-    border: grey 2px solid;
-    border-radius: 20px;
-    background-color: rgb(221, 221, 221);
-    text-align: center;
-    padding: 10px;
-    line-height: 2em;
-    margin-bottom: 3em;
-}
+h1 {
+    box-shadow: var(--box-shadow-title);
+}    
 
-.hautTexte,
+.hautTexte,.teteText, 
 h3 {
-    border: grey 2px solid;
+    border: var(--border);
     border-radius: 20px;
     background-color: rgb(221, 221, 221);
     text-align: center;
     padding: 10px;
     margin-bottom: 3em;
     line-height: 2em;
+    box-shadow: var(--box-shadow);
+}    
+
+.hautTexte {
+    font-family: 'NanumPen',sans-serif;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    padding: 2em;
+}        
+
+h3{
+    margin-top: 4em;
+    font-family: 'Monoton', sans-serif;
+    font-size: 2em;
+    letter-spacing: 4px;
 }
 
 .listeFDM {
@@ -109,6 +118,7 @@ h3 {
     border: grey 2px solid;
     border-radius: 20px;
     background-color: rgb(221, 221, 221);
+    box-shadow: var(--box-shadow);
 }
 
 .boxPicFDM {

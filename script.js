@@ -118,37 +118,19 @@ for (let x = 0; x < buttonRadio.length; x++) {
 
 /*************** effets sur les images ************************** */
 
-for (let i = 0; i < cells.length; i++) {
-  cells[i].style.width = 95 + "px";
-  cells[i].style.height = 100 + "px";
-  cells[i].addEventListener("mouseover", function (e) {
-    console.log("i =  " + i);
-    for (let y = 0; y < cells.length; y++) {
-      cells[y].style.width = 95 + "px";
-      cells[y].style.height = 100 + "px";
+for (let i = 0; i < cells.length; i++ ) {
+  cells[i].addEventListener('mouseover', (e)=>{
+    for (const c of cells) {
+      c.classList.remove('previous', 'next');
     }
-    cells[i].style.width = 130 + "px";
-    cells[i].style.height = 150 + "px";
-
-    if (i > 0) {
-      cells[i - 1].style.width = 118 + "px";
-      cells[i - 1].style.height = 125 + "px";
-    }
-    if (i < cells.length) {
-      cells[i + 1].style.width = 118 + "px";
-      cells[i + 1].style.height = 125 + "px";
+    if (i > 0) cells[i-1].classList.add('previous')
+    if (i < cells.length) cells[i+1].classList.add('next')
+  })
+}
+for (let i = 0; i < cells.length; i++ ) {
+  cells[i].addEventListener('mouseleave', (e)=>{
+    for (const c of cells) {
+      c.classList.remove('previous', 'next');
     }
   })
-  cells[i].addEventListener("mouseleave", function (e) {
-    console.log("i =  " + i);
-    for (let y = 0; y < cells.length; y++) {
-      cells[y].style.width = 95 + "px";
-      cells[y].style.height = 100 + "px";
-    }
-  })
-  // for (let y = 0; y < cells.length; y++) {
-  //   cells[y].style.width = 95 + "px";
-  //   cells[y].style.height = 100 + "px";
-  // }
-
 }

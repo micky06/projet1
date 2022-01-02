@@ -1,9 +1,8 @@
-
 * {
     box-sizing: border-box;
 }
 
-body {
+.main {
     font-family: sans-serif;
     text-align: center;
     display: flex;
@@ -13,6 +12,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 100%;
 }
 
 .imageBody1 {
@@ -41,6 +41,7 @@ body {
 .hautDePage {
     display: flex;
     flex-direction: row;
+    height: 70%;
 }
 
 .cadrePhoto {
@@ -49,87 +50,108 @@ body {
     width: 800px;
     height: 600px;
     margin: 4em 0 0 11%;
-    /* perspective: 1000px; */
     overflow: hidden;
     background-color: black;
 }
 
 .photo {
     align-self: auto;
-    height:600px ;
+    height: 600px;
 }
+
 .buttons {
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
     margin: 14em 0 0 5%;
 }
 
- label {
-     font-size: 1.5em;
-     border:  1px solid blue;
-     padding: 1em;
-     margin-bottom: 2em;
-     border-radius: 90%;
-     transition: 0.4s;
-   }
+label {
+    font-size: 1.5em;
+    border: 1px solid blue;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 90%;
+    transition: 0.4s;
+    font-family: 'NanumPen', sans-serif;
+}
 
-   label:hover {
-       background-color: blue;
-       color: whitesmoke;
-   }
-  
+label:hover {
+    background-color: blue;
+    color: whitesmoke;
+}
 
-   .labelboutton {
-       background-color: blue;
-       color: whitesmoke;
-   }
-  
- input {
-     display: none;
-   }
- 
+
+.labelboutton {
+    background-color: blue;
+    color: whitesmoke;
+}
+
+input {
+    display: none;
+}
+
 .icon {
     display: none;
 }
-.carousel {    
+
+.basDePage {
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: row;
-    margin-top: 3em;
-    width: 100%;
-    height: 10%;
+    height: 25%;
 }
 
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+
 .carousel__cell {
-    width: 95px;
-    height: 100px;
-    left: 10px;
-    border: 2px solid black;
+    display: block;
+    overflow: hidden;
+    border: var(--border);
     opacity: 0.3;
     border-radius: 10%;
     transition-duration: 0.4s;
+    height: 100px;
+    width: 95px;
+    margin: 3px;
+    position: relative;
+    z-index: 2;
 }
 
 .carousel__cell:hover {
-    width: 130px;
-    height: 150px;
-    margin-top: -8em;
-    border-radius: 10%;
     opacity: 1;
+    transform: scale(1.4);
+}
+
+.carousel__cell.previous,
+.carousel__cell.next {
+    position: relative;
+    z-index: 1;
+    opacity: 0.6;
+    transform: scale(1.2);
 }
 
 .carousel1 {
     display: none;
 }
+
 .carousel2 {
     display: none;
 }
+
 .carousel3 {
     display: none;
 }
+
 .apparait {
-    display: block;
+    display: flex;
 }
 
 
@@ -138,60 +160,81 @@ body {
         flex-direction: column;
         margin: 0;
     }
-    .cadrePhoto{
+
+    .cadrePhoto {
         margin: 2em auto 0;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: row;
         justify-content: space-around;
         margin: 2em 0 0 0;
     }
-    }
+}
 
 @media all and (max-width: 900px) {
+    .carousel__cell {
+        opacity: 0.6;
+    }
+    .imageBody1, .imageBody2, .imageBody3 {
+        background: none;
+    }
+
     .hautDePage {
         flex-direction: column;
         margin: 0;
     }
-    .cadrePhoto{
+
+    .cadrePhoto {
         width: 500px;
         height: 400px;
         margin: 2em auto 0;
     }
+
     .photo {
         width: 500px;
         height: 400px;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: row;
         margin: 2em 0 0 0;
     }
 }
 
 @media all and (max-width: 645px) {
+    .imageBody1, .imageBody2, .imageBody3 {
+        background: none;
+    }
+
     .hautDePage {
         flex-direction: column;
         margin: 0;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: row;
         margin: 2em 0 0 0;
     }
-    .cadrePhoto{
+
+    .cadrePhoto {
         width: 400px;
         height: 267px;
         margin: 2em auto 0;
     }
+
     .photo {
         width: 400px;
         height: 267px;
     }
+
     label {
         width: 78px;
         height: 78px;
         /* overflow: hidden; */
-        
+
     }
+
     .icon {
         display: block;
         height: 58px;
@@ -199,11 +242,13 @@ body {
         padding: 0;
         margin: -15px;
     }
-    .carousel__cell{
+
+    .carousel__cell {
         opacity: 0.7;
         margin-bottom: 2em;
     }
+
     .spanIcon {
         visibility: hidden;
     }
-    }
+}
