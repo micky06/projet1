@@ -5,9 +5,11 @@
 :root {
     --border: grey 2px solid;
     --box-shadow: 15px 15px 50px black;
+    --box-shadow-blue: 5px 5px 20px rgb(71, 71, 243);
+    --box-shadow-blue-revers: inset 15px 15px 20px rgb(93, 93, 190);
+    --box-shadow-title: inset 3px 3px 20px black;
     --color-bgd-txt: rgb(221, 221, 221);
     --color-bgd: rgba(52, 182, 255, 0.6);
-    --box-shadow-title: inset 3px 3px 20px black;
 }
 
 @font-face {
@@ -57,7 +59,7 @@ body {
 
 .menu {
     z-index: 10;
-    position: absolute;
+    /* position: absolute; */
     position: fixed;
     margin: 20px;
     list-style: none;
@@ -150,7 +152,7 @@ body {
     font-size: 0.8em;
     height: 4em;
     background-color: cornflowerblue;
-    /* width: 100%; */
+    z-index: 10;
     padding: 0;
 }
 

@@ -2,40 +2,40 @@
     box-sizing: border-box;
 }
 
+body {
+    background: url("assets/pictures/background/imprimante.png");
+}
+
 .main {
     font-family: sans-serif;
     text-align: center;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    background: url("assets/pictures/background/imprimante.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    margin-bottom: 50px;
+}
+
+.imageBody1, .imageBody2, .imageBody3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .imageBody1 {
-    background: url("assets/pictures/background/imprimante.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("assets/pictures/background/imprimante.png");
 }
 
 
 .imageBody2 {
-    background: url("assets/pictures/background/filament.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("assets/pictures/background/filament.png");
 }
 
 
 .imageBody3 {
-    background: url("assets/pictures/background/realisation.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("assets/pictures/background/realisation.png");
 }
 
 .hautDePage {
@@ -49,14 +49,16 @@
     position: relative;
     width: 800px;
     height: 600px;
-    margin: 4em 0 0 11%;
+    margin: 4em 0 30px 11%;
     overflow: hidden;
     background-color: black;
 }
 
 .photo {
     align-self: auto;
-    height: 600px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .buttons {
@@ -67,22 +69,23 @@
 
 label {
     font-size: 1.5em;
-    border: 1px solid blue;
+    border: 1px solid rgb(137, 137, 240);
     padding: 1em;
     margin-bottom: 2em;
     border-radius: 90%;
     transition: 0.4s;
     font-family: 'NanumPen', sans-serif;
+    box-shadow: var(--box-shadow-blue);
 }
 
 label:hover {
-    background-color: blue;
+    background-color: rgb(152, 152, 243);
     color: whitesmoke;
 }
 
 
 .labelboutton {
-    background-color: blue;
+    background-color: rgb(137, 137, 240);
     color: whitesmoke;
 }
 
@@ -162,7 +165,7 @@ input {
     }
 
     .cadrePhoto {
-        margin: 2em auto 0;
+        margin: 2em auto 30px;
     }
 
     .buttons {
@@ -173,11 +176,12 @@ input {
 }
 
 @media all and (max-width: 900px) {
+
     .carousel__cell {
         opacity: 0.6;
     }
     .imageBody1, .imageBody2, .imageBody3 {
-        background: none;
+        background-image: none;
     }
 
     .hautDePage {
@@ -188,12 +192,7 @@ input {
     .cadrePhoto {
         width: 500px;
         height: 400px;
-        margin: 2em auto 0;
-    }
-
-    .photo {
-        width: 500px;
-        height: 400px;
+        margin: 2em auto 20px;
     }
 
     .buttons {
@@ -204,7 +203,7 @@ input {
 
 @media all and (max-width: 645px) {
     .imageBody1, .imageBody2, .imageBody3 {
-        background: none;
+        background-image: none;
     }
 
     .hautDePage {
@@ -220,12 +219,7 @@ input {
     .cadrePhoto {
         width: 400px;
         height: 267px;
-        margin: 2em auto 0;
-    }
-
-    .photo {
-        width: 400px;
-        height: 267px;
+        margin: 2em auto 20px;
     }
 
     label {

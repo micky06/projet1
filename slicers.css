@@ -29,10 +29,10 @@ h3 {
     line-height: 2em;
     font-family: 'Monoton', sans-serif;
     font-size: 2em;
-    box-shadow: inset 3px 3px 20px black;
+    box-shadow: var(--box-shadow-title);
 }
 h3:hover {
-    background-color: rgba(52, 182, 255, 0.6);
+    background-color: var(--color-bgd);
 }
 
 .teteText {

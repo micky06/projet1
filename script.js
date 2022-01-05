@@ -57,8 +57,9 @@ let cellCount; // cellCount set from cells-range input value
 let selectedIndex = 0;
 
 carousel1.classList.add("apparait");
-labelButton[0].style.background = 'blue';
+labelButton[0].style.background = 'rgb(137, 137, 240)';
 labelButton[0].style.color = 'whitesmoke';
+labelButton[0].style.boxShadow = 'var(--box-shadow-blue-revers)';
 
 for (let btn of cells) {
   btn.addEventListener('click', (e) => {
@@ -73,15 +74,19 @@ for (let x = 0; x < buttonRadio.length; x++) {
     /***************** remise a zero des menus***************** */
     labelButton[0].style.background = 'rgba(52, 182, 255, 0.01)';
     labelButton[0].style.color = 'black';
+    labelButton[0].style.boxShadow = 'var(--box-shadow-blue)';
     labelButton[1].style.background = 'rgba(52, 182, 255, 0.01)';
     labelButton[1].style.color = 'black';
+    labelButton[1].style.boxShadow = 'var(--box-shadow-blue)';
     labelButton[2].style.background = 'rgba(52, 182, 255, 0.01)';
     labelButton[2].style.color = 'black';
+    labelButton[2].style.boxShadow = 'var(--box-shadow-blue)';
     /***************** recherche du radio checked ************** */
     if (buttonRadio[x].checked) {
       valeur = buttonRadio[x].value
-      labelButton[x].style.background = 'blue';
+      labelButton[x].style.background = 'rgb(137, 137, 240)';
       labelButton[x].style.color = 'whitesmoke';
+      labelButton[x].style.boxShadow = 'var(--box-shadow-blue-revers)';
     }
     /********* afficher les images correspondant au menu ********/
     switch (valeur) {
