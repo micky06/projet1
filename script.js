@@ -1,4 +1,52 @@
 /******************************************************************************************/
+/**********************************   DARK MODE  *****************************************/
+/******************************************************************************************/
+
+const btnDark = document.querySelector('.item6');
+const picDark6 = document.querySelector('.item6');
+const picDark7 = document.querySelector('.item7');
+const memoireDark = localStorage.getItem("theme");
+
+let darkmode = false;
+if (memoireDark){
+  document.documentElement.style.setProperty('--color-bgd-txt', 'rgba(47, 51, 53, 0.6)');
+  document.documentElement.style.setProperty('--color-bgd', 'rgb(49, 48, 48)');
+  document.documentElement.style.setProperty('--color-txt', 'rgb(199, 196, 196)');
+  document.documentElement.style.setProperty('--color-bgd-hover', 'rgba(25, 82, 116, 0.6)');
+  document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(27, 27, 27)');
+  document.documentElement.style.setProperty('--color-footer', 'rgb(10, 51, 75)');
+  document.documentElement.style.setProperty('--color-menu-txt', 'rgb(221, 221, 221)');
+darkmode = true;
+}
+
+function DarkMode() {
+  if (darkmode === false)// ********** SI MODE FONCE  ************
+  {
+    document.documentElement.style.setProperty('--color-bgd-txt', 'rgba(47, 51, 53, 0.6)');
+    document.documentElement.style.setProperty('--color-bgd', 'rgb(49, 48, 48)');
+    document.documentElement.style.setProperty('--color-txt', 'rgb(199, 196, 196)');
+    document.documentElement.style.setProperty('--color-bgd-hover', 'rgba(25, 82, 116, 0.6)');
+    document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(27, 27, 27)');
+    document.documentElement.style.setProperty('--color-footer', 'rgb(10, 51, 75)');
+    document.documentElement.style.setProperty('--color-menu-txt', 'rgb(221, 221, 221)');
+    darkmode = true;
+    localStorage.setItem("theme", darkmode);
+  }
+  else// ********** SI MODECLAIR ************
+  {
+    document.documentElement.style.setProperty('--color-bgd-txt', 'rgb(221, 221, 221)');
+    document.documentElement.style.setProperty('--color-bgd', 'rgba(52, 182, 255, 0.6)');
+    document.documentElement.style.setProperty('--color-txt', 'rgb(0, 0, 0)');
+    document.documentElement.style.setProperty('--color-bgd-hover', 'rgba(52, 182, 255, 0.6)');
+    document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(221, 221, 221)');
+    document.documentElement.style.setProperty('--color-footer', 'rgb(42, 150, 212)');
+    document.documentElement.style.setProperty('--color-menu-txt', 'rgb(0, 0, 0)');
+    darkmode = false;
+    localStorage.setItem("theme", darkmode);
+  }
+}
+
+/******************************************************************************************/
 /**********************************   INDEX.HTML  *****************************************/
 /******************************************************************************************/
 
@@ -9,7 +57,6 @@ const pageResine = document.querySelector('.resine')
 const pageResineEnfant = document.querySelector('.resineEnfant')
 const pageTDP = document.querySelector('.troisDP')
 const pageTDPEnfant = document.querySelector('.troisDPEnfant')
-const transition = document.querySelector('.cercle')
 for (let i = 0; i < menuPrinters.length; i++) {
   pageFDM.classList.add("apparait");
   pageFDMEnfant.classList.add("apparaitEnfant");

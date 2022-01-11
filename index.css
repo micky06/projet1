@@ -3,7 +3,9 @@
 /****************************************************************************/
 
 /****************************            CAROUSEL             ***************/
-
+body {
+    color: var(--color-txt);
+}
 @keyframes display {
     0% {
         transform: translateX(100%);
@@ -38,6 +40,7 @@
     height: 50%;
     margin: 0;
     padding: 0;
+    top: 0;
 }
 
 .carousel>img {

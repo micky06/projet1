@@ -23,7 +23,7 @@ h3, .teteText, .picSlicer p, .hautText {
 }
 
 h3 {
-    color: black;
+    color: var(--color-txt);
     padding: 10px;
     margin-bottom: 3em;
     line-height: 2em;
@@ -32,7 +32,7 @@ h3 {
     box-shadow: var(--box-shadow-title);
 }
 h3:hover {
-    background-color: var(--color-bgd);
+    background-color: var(--color-bgd-hover);
 }
 
 .teteText {

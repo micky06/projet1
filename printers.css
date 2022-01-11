@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     height: 85vh;
-
+    color: var(--color-txt);
 }
 
 /* ***************************************************************** */
@@ -85,7 +85,7 @@ h1 {
 h3 {
     border: var(--border);
     border-radius: 20px;
-    background-color: rgb(221, 221, 221);
+    background-color: var(--color-bgd-txt);
     text-align: center;
     padding: 10px;
     margin-bottom: 3em;
@@ -118,7 +118,7 @@ h3{
     padding: 1em;
     border: var(--border);
     border-radius: 20px;
-    background-color: rgb(221, 221, 221);
+    background-color: var(--color-bgd-txt);
     box-shadow: var(--box-shadow);
 }
 
