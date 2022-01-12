@@ -2,25 +2,14 @@
 /**********************************   DARK MODE  *****************************************/
 /******************************************************************************************/
 
+const memoireDark = () => localStorage.getItem("theme");
 const btnDark = document.querySelector('.item6');
-const picDark6 = document.querySelector('.item6');
-const picDark7 = document.querySelector('.item7');
-const memoireDark = localStorage.getItem("theme");
+const linkDark = document.querySelector('.link6');
 
-let darkmode = false;
-if (memoireDark){
-  document.documentElement.style.setProperty('--color-bgd-txt', 'rgba(47, 51, 53, 0.6)');
-  document.documentElement.style.setProperty('--color-bgd', 'rgb(49, 48, 48)');
-  document.documentElement.style.setProperty('--color-txt', 'rgb(199, 196, 196)');
-  document.documentElement.style.setProperty('--color-bgd-hover', 'rgba(25, 82, 116, 0.6)');
-  document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(27, 27, 27)');
-  document.documentElement.style.setProperty('--color-footer', 'rgb(10, 51, 75)');
-  document.documentElement.style.setProperty('--color-menu-txt', 'rgb(221, 221, 221)');
-darkmode = true;
-}
+window.onload = DarkMode(memoireDark(), false);
 
-function DarkMode() {
-  if (darkmode === false)// ********** SI MODE FONCE  ************
+function DarkMode(memoire, click) {
+  if ((memoire === "DARK" && click) || (memoire === "NODARK" && !click)) // ********** SI MODE FONCE  ************
   {
     document.documentElement.style.setProperty('--color-bgd-txt', 'rgba(47, 51, 53, 0.6)');
     document.documentElement.style.setProperty('--color-bgd', 'rgb(49, 48, 48)');
@@ -29,10 +18,9 @@ function DarkMode() {
     document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(27, 27, 27)');
     document.documentElement.style.setProperty('--color-footer', 'rgb(10, 51, 75)');
     document.documentElement.style.setProperty('--color-menu-txt', 'rgb(221, 221, 221)');
-    darkmode = true;
-    localStorage.setItem("theme", darkmode);
-  }
-  else// ********** SI MODECLAIR ************
+    linkDark.innerHTML = 'Mode Clair';
+    if (click) localStorage.setItem("theme", "NODARK");
+  } else if ((memoire === "NODARK" && click) || (memoire === "DARK" && !click)) // ********** SI MODECLAIR ************
   {
     document.documentElement.style.setProperty('--color-bgd-txt', 'rgb(221, 221, 221)');
     document.documentElement.style.setProperty('--color-bgd', 'rgba(52, 182, 255, 0.6)');
@@ -41,8 +29,8 @@ function DarkMode() {
     document.documentElement.style.setProperty('--color-bgd-menu', 'rgb(221, 221, 221)');
     document.documentElement.style.setProperty('--color-footer', 'rgb(42, 150, 212)');
     document.documentElement.style.setProperty('--color-menu-txt', 'rgb(0, 0, 0)');
-    darkmode = false;
-    localStorage.setItem("theme", darkmode);
+    linkDark.innerHTML = 'Mode Sombre';
+    if (click) localStorage.setItem("theme", "DARK");
   }
 }
 
@@ -63,7 +51,7 @@ for (let i = 0; i < menuPrinters.length; i++) {
   menuPrinters[i].addEventListener('click', function () {
     if (menuPrinters[i].alt === "FDM") {
       pageFDM.classList.add("apparait");
-      setTimeout(() => pageFDMEnfant.classList.add("apparaitEnfant"), 1)
+      setTimeout(() => pageFDMEnfant.classList.add("apparaitEnfant"), 1);
       pageResine.classList.remove("apparait");
       pageResineEnfant.classList.remove("apparaitEnfant");
       pageTDP.classList.remove("apparait");
@@ -99,14 +87,12 @@ const pic3 = document.querySelector('.liste3');
 const cadre = document.querySelector('.photo');
 const cells = document.querySelectorAll('.carousel__cell');
 const labelButton = document.querySelectorAll('label');
+const label1 = document.querySelector('#label1');
+const label2 = document.querySelector('#label2');
+const label3 = document.querySelector('#label3');
 const buttonRadio = document.querySelectorAll('.button');
-let cellCount; // cellCount set from cells-range input value
-let selectedIndex = 0;
 
 carousel1.classList.add("apparait");
-labelButton[0].style.background = 'rgb(137, 137, 240)';
-labelButton[0].style.color = 'whitesmoke';
-labelButton[0].style.boxShadow = 'var(--box-shadow-blue-revers)';
 
 for (let btn of cells) {
   btn.addEventListener('click', (e) => {
@@ -118,24 +104,11 @@ for (let btn of cells) {
 let valeur = '';
 for (let x = 0; x < buttonRadio.length; x++) {
   buttonRadio[x].addEventListener('click', function () {
-    /***************** remise a zero des menus***************** */
-    labelButton[0].style.background = 'rgba(52, 182, 255, 0.01)';
-    labelButton[0].style.color = 'black';
-    labelButton[0].style.boxShadow = 'var(--box-shadow-blue)';
-    labelButton[1].style.background = 'rgba(52, 182, 255, 0.01)';
-    labelButton[1].style.color = 'black';
-    labelButton[1].style.boxShadow = 'var(--box-shadow-blue)';
-    labelButton[2].style.background = 'rgba(52, 182, 255, 0.01)';
-    labelButton[2].style.color = 'black';
-    labelButton[2].style.boxShadow = 'var(--box-shadow-blue)';
-    /***************** recherche du radio checked ************** */
+  /***************** recherche du radio checked ************** */
     if (buttonRadio[x].checked) {
       valeur = buttonRadio[x].value
-      labelButton[x].style.background = 'rgb(137, 137, 240)';
-      labelButton[x].style.color = 'whitesmoke';
-      labelButton[x].style.boxShadow = 'var(--box-shadow-blue-revers)';
     }
-    /********* afficher les images correspondant au menu ********/
+  /********* afficher la liste des images correspondant au menu ********/
     switch (valeur) {
       case 'Imprimantes':
         document.body.classList.add('imageBody1');
@@ -167,20 +140,19 @@ for (let x = 0; x < buttonRadio.length; x++) {
     }
   });
 }
-
 /*************** effets sur les images ************************** */
 
-for (let i = 0; i < cells.length; i++ ) {
-  cells[i].addEventListener('mouseover', (e)=>{
+for (let i = 0; i < cells.length; i++) {
+  cells[i].addEventListener('mouseover', (e) => {
     for (const c of cells) {
       c.classList.remove('previous', 'next');
     }
-    if (i > 0) cells[i-1].classList.add('previous')
-    if (i < cells.length) cells[i+1].classList.add('next')
+    if (i > 0) cells[i - 1].classList.add('previous')
+    if (i < cells.length) cells[i + 1].classList.add('next')
   })
 }
-for (let i = 0; i < cells.length; i++ ) {
-  cells[i].addEventListener('mouseleave', (e)=>{
+for (let i = 0; i < cells.length; i++) {
+  cells[i].addEventListener('mouseleave', (e) => {
     for (const c of cells) {
       c.classList.remove('previous', 'next');
     }

@@ -5,6 +5,7 @@
 
 body {
     text-align: center;
+    color: var(--color-txt);
 }
 
 h3, .teteText, .picSlicer p, .hautText {
@@ -56,12 +57,12 @@ h3:hover {
    width: 50%;
    min-width: 500px; 
 }
-
+/* 
 span {
-    font: italic 1.3em gray;
+    font: italic 1.3em gray bold;
     font-family: cursive;
 }
-
+ */
 .picSlicer img {
     width: 50%;
     min-width: 500px;

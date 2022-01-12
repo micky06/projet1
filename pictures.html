@@ -10,7 +10,7 @@
     <title>Photos-Vidéos</title>
 </head>
 
-<body>
+<body id="bodyPictures">
 
     <nav class="navMenu">
         <div class="menuItem">≡</div>
@@ -32,22 +32,31 @@
                 <a href="slicers.html" class="link">Slicers</a>
             </li>
             <li class="item6 item">
-                <button onclick="DarkMode()" class="link link6">Mode SOMBRE</button>
+                <button onclick="DarkMode(memoireDark(), true), DarkBody()" class="link link6">CLAIR-SOMBRE</button>
             </li>
         </ul>
     </nav>
     <main class="main">
         <div class="hautDePage">
             <div class="buttons">
-                <label><input type="radio" class="button" name="choixPhotos" value="Imprimantes" checked><img
-                        src="assets/pictures/Icons/impIcon.png" alt="icon1" class="icon"></img><span
-                        class="spanIcon">Imprimantes</span> </label>
-                <label><input type="radio" class="button" name="choixPhotos" value="Consommables"><img
-                        src="assets/pictures/Icons/consoIcon.png" alt="icon2" class="icon"></img><span
-                        class="spanIcon">Consommables</span></label>
-                <label><input type="radio" class="button" name="choixPhotos" value="Réalisations"><img
-                        src="assets/pictures/Icons/realIcon.png" alt="icon3" class="icon"></img><span
-                        class="spanIcon">Réalisations</span></label>
+                <div>
+                    <input type="radio" class="button" name="choixPhotos" value="Imprimantes" checked>
+                    <label id="label1"><img src="assets/pictures/Icons/impIcon.png" alt="icon1" class="icon"></img><span
+                            class="spanIcon">Imprimantes</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" class="button" name="choixPhotos" value="Consommables">
+                    <label id="label2"><img src="assets/pictures/Icons/consoIcon.png" alt="icon2"
+                            class="icon"></img><span class="spanIcon">Consommables</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" class="button" name="choixPhotos" value="Réalisations">
+                    <label id="label3"><img src="assets/pictures/Icons/realIcon.png" alt="icon3"
+                            class="icon"></img><span class="spanIcon">Réalisations</span>
+                    </label>
+                </div>
             </div>
             <div class="cadrePhoto">
                 <img src="assets/pictures/redimensionne/imprimante (1).gif" alt="Photo" class="photo">
@@ -119,6 +128,7 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="pictures.js"></script>
 </body>
 
 </html>

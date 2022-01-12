@@ -28,11 +28,9 @@ body {
     background-image: url("assets/pictures/background/imprimante.png");
 }
 
-
 .imageBody2 {
     background-image: url("assets/pictures/background/filament.png");
 }
-
 
 .imageBody3 {
     background-image: url("assets/pictures/background/realisation.png");
@@ -40,7 +38,7 @@ body {
 
 .hautDePage {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
     height: 70%;
 }
 
@@ -49,7 +47,7 @@ body {
     position: relative;
     width: 800px;
     height: 600px;
-    margin: 4em 0 30px 11%;
+    margin: 4em 0 30px ;
     overflow: hidden;
     background-color: black;
 }
@@ -63,34 +61,73 @@ body {
 
 .buttons {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin: 14em 0 0 5%;
+    width: 300px;
+    position: fixed;
+    left: 5px;
+    top: 0;
+    bottom: 0;
 }
 
 label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
     border: 1px solid rgb(137, 137, 240);
-    padding: 1em;
+    padding: 0.5em;
     margin-bottom: 2em;
-    border-radius: 90%;
+    border-radius: 50%;
     transition: 0.4s;
     font-family: 'NanumPen', sans-serif;
+    background: transparent;
+    color : black;
     box-shadow: var(--box-shadow-blue);
+    position: relative;
+    z-index: 9;
 }
 
-label:hover {
-    background-color: rgb(152, 152, 243);
-    color: whitesmoke;
+input:hover +label {
+    background-color: var(--color-bgd-hover);
+    color: var(--color-txt);
 }
 
+input[type='radio']:checked +label {
+    background-color: var(--color-bgd-hover);
+    color: var(--color-txt);
+    box-shadow: var(--box-shadow-blue-revers);
+}
 
-.labelboutton {
-    background-color: rgb(137, 137, 240);
-    color: whitesmoke;
+.buttons div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+}
+
+.darkLabel {
+    background: rgba(52, 182, 255, 0.01);
+    color: black;
+    box-Shadow: var(--box-shadow-blue);
 }
 
 input {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    z-index: 10;
+
 }
 
 .icon {
@@ -158,7 +195,7 @@ input {
 }
 
 
-@media all and (max-width: 1250px) {
+@media all and (max-width: 1350px) {
     .hautDePage {
         flex-direction: column;
         margin: 0;
@@ -170,8 +207,15 @@ input {
 
     .buttons {
         flex-direction: row;
-        justify-content: space-around;
+        align-items: center;
+        justify-content: center;
         margin: 2em 0 0 0;
+        width: 100%;
+        position: relative;
+    }
+
+    label {
+        margin: 0;
     }
 }
 
@@ -194,14 +238,13 @@ input {
         height: 400px;
         margin: 2em auto 20px;
     }
-
+    
     .buttons {
-        flex-direction: row;
-        margin: 2em 0 0 0;
+        justify-content: space-between;
     }
 }
 
-@media all and (max-width: 645px) {
+@media all and (max-width: 780px) {
     .imageBody1, .imageBody2, .imageBody3 {
         background-image: none;
     }
@@ -213,7 +256,10 @@ input {
 
     .buttons {
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
         margin: 2em 0 0 0;
+        align-items: center;
     }
 
     .cadrePhoto {
@@ -225,16 +271,12 @@ input {
     label {
         width: 78px;
         height: 78px;
-        /* overflow: hidden; */
-
     }
 
     .icon {
         display: block;
         height: 58px;
         width: 58px;
-        padding: 0;
-        margin: -15px;
     }
 
     .carousel__cell {
@@ -243,6 +285,6 @@ input {
     }
 
     .spanIcon {
-        visibility: hidden;
+        display: none;
     }
 }

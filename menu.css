@@ -17,16 +17,6 @@
     --color-txt: rgb(0, 0, 0);
 }
 
-.darkMode{
-    --color-bgd-txt: rgba(47, 51, 53, 0.6);
-    --color-bgd: rgb(49, 48, 48);
-    --color-txt: rgb(199, 196, 196);
-    --color-bgd-hover: rgba(25, 82, 116, 0.6);
-    --color-bgd-menu: rgb(27, 27, 27);
-    --color-footer: rgb(10, 51, 75);
-    --color-menu-txt:green;
-}
-
 @font-face {
     font-family: 'NanumPen';
     src: url('assets/fonts/Changa_One/ChangaOne-Italic.ttf');
@@ -42,6 +32,12 @@
     src: url("assets/fonts/Lobster/Lobster-Regular.ttf");
 }
 
+
+@font-face {
+    font-family: "LuxuriousRoman";
+    src: url("assets/fonts/Luxurious_Roman/LuxuriousRoman-Regular.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -50,7 +46,6 @@ body {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--color-bgd);
     box-sizing: border-box;
-    color: var(-color-menu-txt);
 }
 
 .containerTitre {
@@ -76,6 +71,14 @@ body {
     width: 50px;
     height: 50px;
     z-index: 99;
+}
+
+.item { 
+    font-size: 1.3em;
+}
+
+.item a, .item a:visited {
+    color: var(--color-txt);
 }
 
 .navMenu .menuItem {
@@ -197,10 +200,11 @@ body {
 }
 
 .navMenu .menu li .link {
-    font-family: "Lobster", sans-serif;
-    font-size: 1.3em;
-    font-weight: bold;
+    font-family: "LuxuriousRoman", sans-serif;
+    font-size: 1.1em;
     cursor: grab;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .item6 button {
@@ -244,6 +248,11 @@ body {
     width: 100%;
 }
 
+span {
+    font: italic 1.3em gray bold;
+    font-family: cursive;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -260,6 +269,7 @@ body {
 }
 
 .titleFooter {
+    color: var(--color-txt);
     margin: 0;
     text-align: center;
     width: 30%;
