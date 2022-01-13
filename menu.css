@@ -1,7 +1,8 @@
 /****************************************************************************/
-/**************************** PARTIE COMMUNE AUX PAGES : MENU ***************/
+/****************************     PARTIE COMMUNE AUX PAGES    ***************/
 /****************************************************************************/
 
+/****************************        VARIABLES / FONTS        ***************/
 :root {
     --border: grey 2px solid;
     --box-shadow: 15px 15px 50px black;
@@ -13,7 +14,7 @@
     --color-bgd-hover: rgba(52, 182, 255, 0.6);
     --color-bgd-menu: rgb(221, 221, 221);
     --color-footer: rgb(42, 150, 212);
-    --color-menu-txt:rgba(14, 15, 15, 0.6);
+    --color-menu-txt: rgba(14, 15, 15, 0.6);
     --color-txt: rgb(0, 0, 0);
 }
 
@@ -38,6 +39,7 @@
     src: url("assets/fonts/Luxurious_Roman/LuxuriousRoman-Regular.ttf");
 }
 
+/****************************            MENU             ***************/
 body {
     margin: 0;
     padding: 0;
@@ -73,11 +75,12 @@ body {
     z-index: 99;
 }
 
-.item { 
+.item {
     font-size: 1.3em;
 }
 
-.item a, .item a:visited {
+.item a,
+.item a:visited {
     color: var(--color-txt);
 }
 
@@ -110,7 +113,7 @@ body {
     height: 50px;
     width: 25px;
     border-bottom-left-radius: 25px;
-    box-shadow: 0 25px 0 0 var(--color-bgd-menu); /* This is where the magic happens! */
+    box-shadow: 0 25px 0 0 var(--color-bgd-menu);
     transition: all ease-in-out 1ms 500ms;
 }
 
@@ -124,7 +127,7 @@ body {
     height: 50px;
     width: 25px;
     border-top-left-radius: 25px;
-    box-shadow: 0 -25px 0 0 var(--color-bgd-menu); /* This is where the magic happens! */
+    box-shadow: 0 -25px 0 0 var(--color-bgd-menu);
 }
 
 .navMenu .menu {
@@ -166,12 +169,12 @@ body {
     border-radius: 0;
     box-shadow: none;
     transition: background-color 16ms ease-in-out 10ms,
-    width 1ms ease-in-out,
-    height 1ms ease-in-out,
-    border-radius 1ms ease-in-out,
-    box-shadow 1ms ease-in-out,
-    top 1ms ease-in-out,
-    left 1ms ease-in-out;
+        width 1ms ease-in-out,
+        height 1ms ease-in-out,
+        border-radius 1ms ease-in-out,
+        box-shadow 1ms ease-in-out,
+        top 1ms ease-in-out,
+        left 1ms ease-in-out;
 }
 
 .navMenu:hover ul li:nth-child(1) {
@@ -207,6 +210,8 @@ body {
     font-weight: bold;
 }
 
+/**********   BOUTON DARK / CLEAR   *********/
+
 .item6 button {
     color: var(--color-bgd-menu);
     background-color: var(--color-menu-txt);
@@ -216,32 +221,8 @@ body {
     cursor: grab;
 }
 
-@keyframes deroule {
-    0% {
-        width: 90px;
-        height: 30px;
-    }
+/* *************   FOOTER   ****************/
 
-    33% {
-        width: 160px;
-        height: 30px;
-    }
-
-    50% {
-        width: 160px;
-        height: 160px;
-    }
-
-    100% {
-        width: 160px;
-        height: 340px;
-        /*height: 280px;*/
-    }
-}
-
-
-
-/* *********************** FOOTER ***********************************/
 .sectionFooter {
     display: flex;
     align-items: flex-end;
@@ -287,5 +268,4 @@ span {
 .logoFooter div img {
     width: 2em;
     height: 2em;
-    /* margin-right: 2em; */
 }

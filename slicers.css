@@ -1,14 +1,16 @@
-
-/* ***************************************************************** */
-/* ******************** MISE EN FORME DE LA PAGE ******************* */
-/* ***************************************************************** */
+/* ************************************************************************** */
+/* ********************        PAGE SLICERS.HTML          ******************* */
+/* ************************************************************************** */
 
 body {
     text-align: center;
     color: var(--color-txt);
 }
 
-h3, .teteText, .picSlicer p, .hautText {
+h3,
+.teteText,
+.picSlicer p,
+.hautText {
     border: var(--border);
     background-color: var(--color-bgd-txt);
     border-radius: 20px;
@@ -32,6 +34,7 @@ h3 {
     font-size: 2em;
     box-shadow: var(--box-shadow-title);
 }
+
 h3:hover {
     background-color: var(--color-bgd-hover);
 }
@@ -43,26 +46,20 @@ h3:hover {
     margin-bottom: 3em;
 }
 
-
 .picSlicer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'NanumPen',sans-serif;
+    font-family: 'NanumPen', sans-serif;
     font-size: 1.5em;
     flex-wrap: wrap;
 }
 
 .texte {
-   width: 50%;
-   min-width: 500px; 
+    width: 50%;
+    min-width: 500px;
 }
-/* 
-span {
-    font: italic 1.3em gray bold;
-    font-family: cursive;
-}
- */
+
 .picSlicer img {
     width: 50%;
     min-width: 500px;

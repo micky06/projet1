@@ -181,6 +181,8 @@ h3{
     font-family: 'ManumPen', sans-serif;
 }
 
+/**************      @MEDIA QUERIES < 900PX      *******/
+
 @media all and (max-width: 900px){
     .listeTypeImpression {
         display: block;

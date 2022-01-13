@@ -1,3 +1,7 @@
+/****************************************************************************/
+/*************************         PAGE PICTURES.HTML          ************/
+/****************************************************************************/
+
 * {
     box-sizing: border-box;
 }
@@ -127,7 +131,6 @@ input {
     appearance: none;
     -webkit-appearance: none;
     z-index: 10;
-
 }
 
 .icon {
@@ -194,6 +197,7 @@ input {
     display: flex;
 }
 
+/*******    @MEDIA QUERIES < 1350PX    *******/
 
 @media all and (max-width: 1350px) {
     .hautDePage {
@@ -219,6 +223,8 @@ input {
     }
 }
 
+/*******    @MEDIA QUERIES < 900PX    *******/
+
 @media all and (max-width: 900px) {
 
     .carousel__cell {
@@ -243,6 +249,8 @@ input {
         justify-content: space-between;
     }
 }
+
+/*******    @MEDIA QUERIES < 780PX    *******/
 
 @media all and (max-width: 780px) {
     .imageBody1, .imageBody2, .imageBody3 {

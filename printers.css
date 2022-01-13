@@ -24,6 +24,12 @@ body {
     margin: 0 4em;
 }
 
+
+.iconMenuPrinters:hover {
+    cursor: pointer;
+    
+}
+
 /* ***************************************************************** */
 /* ****************** TRANSITIONS ENTRE LES PAGES ****************** */
 /* ***************************************************************** */
@@ -149,6 +155,9 @@ h3{
     height: 5em;
     padding-bottom: 5em;
 }
+
+/**************      @MEDIA QUERIES < 800PX      *******/
+
 @media all and (max-width: 800px){
     .iconMenuPrinters {
         height: 5em;

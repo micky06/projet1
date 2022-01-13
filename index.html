@@ -11,16 +11,18 @@
 </head>
 
 <body>
+    <!-- ********** LOGO PRINCIPAL DU SITE  ********** -->
+
     <div class="containerTitre">
         <img src="assets/pictures/3D-printing_new.png" alt="l'impression_3D" class="titre">
     </div>
+
+    <!-- ********** MENU COMMUN A TOUTES LES PAGES  ********** -->
+
     <nav class="navMenu">
         <div class="menuItem">≡</div>
 
         <ul class="menu">
-            <!-- <li class="item1 item">
-                <a href="index.html" class="link">Acceuil</a>
-            </li> -->
             <li class="item2 item">
                 <a href="printers.html" class="link">Imprimantes</a>
             </li>
@@ -34,11 +36,14 @@
                 <a href="slicers.html" class="link">Slicers</a>
             </li>
             <li class="item6 item">
-                <button onclick="DarkMode(memoireDark(), true)"class="link link6">CLAIR-SOMBRE</button>
+                <button onclick="DarkMode(memoireDark(), true)" class="link link6">CLAIR-SOMBRE</button>
             </li>
         </ul>
     </nav>
-        <div class="carousel">
+
+    <!-- ********** CARROUSEL SUR LE HAUT DE LA PAGE  ********** -->
+
+    <div class="carousel">
         <img src="assets/pictures/head/picture (1).png" alt="" class="pic">
         <img src="assets/pictures/head/picture (2).png" alt="" class="pic">
         <img src="assets/pictures/head/picture (3).png" alt="" class="pic">
@@ -47,6 +52,9 @@
         <img src="assets/pictures/head/picture (6).png" alt="" class="pic">
         <img src="assets/pictures/head/picture (7).png" alt="" class="pic">
     </div>
+
+    <!-- ********** PAGE PRINCIPALE  ********** -->
+
     <main class="main">
         <h4 class="teteText">L’impression 3D appelée aussi fabrication additive, n’est pas une technologie qui
             fonctionne d’une seule et
@@ -81,22 +89,23 @@
         </div>
         <div class="texte">
             <p>
-            Ces trois procédés fonctionnent selon le même principe de base, c’est à dire superposer des couches de
-            matières selon les coordonnées XYZ d’un fichier 3D. La différence se situe sur la manière dont sont déposées
-            et traitées ses couches, ainsi que le type de matériau utilisé.
-        </p>
-    </div>
+                Ces trois procédés fonctionnent selon le même principe de base, c’est à dire superposer des couches de
+                matières selon les coordonnées XYZ d’un fichier 3D. La différence se situe sur la manière dont sont
+                déposées
+                et traitées ses couches, ainsi que le type de matériau utilisé.
+            </p>
+        </div>
         <h4 class="titreType">
             Pour la plupart des procédés employés l’utilisateur a besoin :
         </h4>
         <div class="texteLi">
-        <li>d’une imprimante 3D</li>
-        <li>de consommable (filament, poudre…)</li>
-        <li>d’un fichier 3D (le plus souvent au format STL ou OBJ)</li>
-        <li>d’un logiciel de slicing pour trancher le fichier et transmettre les indications à l’imprimante</li>
-        <li>d’un ordinateur</li>
-        <br>
-    </div>
+            <li>d’une imprimante 3D</li>
+            <li>de consommable (filament, poudre…)</li>
+            <li>d’un fichier 3D (le plus souvent au format STL ou OBJ)</li>
+            <li>d’un logiciel de slicing pour trancher le fichier et transmettre les indications à l’imprimante</li>
+            <li>d’un ordinateur</li>
+            <br>
+        </div>
         <div class="indexFin">
             <a>
                 La manière d’exporter les fichiers vers l’imprimante diffère selon les marques et les modèles : câble
@@ -105,30 +114,31 @@
             </a>
         </div>
     </main>
-    <!-- <section class="sectionFooter"> -->
-        <footer class="footer">
-            <div class="titleFooter">
-                Create by <span>MICHAUX Michaël</span> with the <span>Wild Code School</span>.
+
+    <!-- ********** FOOTER  ********** -->
+
+    <footer class="footer">
+        <div class="titleFooter">
+            Create by <span>MICHAUX Michaël</span> with the <span>Wild Code School</span>.
+        </div>
+        <div class="logoFooter">
+            <div>
+                <a href="https://www.facebook.com/groups/cr10france/" target="blank"><img src="assets/icons/FB.png"
+                        alt="FB"></a>
             </div>
-            <div class="logoFooter">
-                <div>
-                    <a href="https://www.facebook.com/groups/cr10france/" target="blank"><img src="assets/icons/FB.png"
-                            alt="FB"></a>
-                </div>
-                <div>
-                    <a href="https://twitter.com/" target="blank"><img src="assets/icons/Twiter.png" alt="Twiter"></a>
-                </div>
-                <div>
-                    <a href="https://www.instagram.com/?hl=fr" target="blank"><img src="assets/icons/instagram.png"
-                            alt="instagram"></a>
-                </div>
-                <div>
-                    <a href="mailto:michael-michaux_student2021@wilder.school"><img src="assets/icons/Mail.png"
-                            alt="Mail"></a>
-                </div>
+            <div>
+                <a href="https://twitter.com/" target="blank"><img src="assets/icons/Twiter.png" alt="Twiter"></a>
             </div>
-        </footer>
-    <!-- </section> -->
+            <div>
+                <a href="https://www.instagram.com/?hl=fr" target="blank"><img src="assets/icons/instagram.png"
+                        alt="instagram"></a>
+            </div>
+            <div>
+                <a href="mailto:michael-michaux_student2021@wilder.school"><img src="assets/icons/Mail.png"
+                        alt="Mail"></a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
