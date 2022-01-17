@@ -6,8 +6,10 @@ const memoireDark = () => localStorage.getItem("theme");
 const btnDark = document.querySelector('.item6');
 const linkDark = document.querySelector('.link6');
 
-window.onload = DarkMode(memoireDark(), false);
+if (memoireDark() === null) {localStorage.setItem("theme", "DARK");}
 
+window.onload = DarkMode(memoireDark(), false);
+console.log(`memoireDark = ${memoireDark()}`);
 function DarkMode(memoire, click) {
   if ((memoire === "DARK" && click) || (memoire === "NODARK" && !click)) // ********** SI MODE FONCE  ************
   {
